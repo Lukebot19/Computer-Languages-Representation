@@ -47,8 +47,8 @@ perfects :: [Int]
 perfects = consumer producer
 
 
--- main :: IO ()
--- main = putStrLn( show ( take 5 perfects ))
+main :: IO ()
+main = putStrLn( show ( take 4 perfects ))
 
 -- Write and read a text file
 test :: String -> String -> IO String
@@ -82,7 +82,7 @@ lambda2 = \x -> x > 7
 test2 :: [Int]
 test2 = filter lambda2 [1..9]
 
-main:: IO ()
-main = putStrLn ( show test2)
+-- main:: IO ()
+-- main = putStrLn ( show test2)
 
 
