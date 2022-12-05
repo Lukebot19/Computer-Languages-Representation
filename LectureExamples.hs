@@ -86,3 +86,26 @@ test2 = filter lambda2 [1..9]
 -- main = putStrLn ( show test2)
 
 
+-- Higher/Lower game
+
+main
+	:- choose(1,100,A),
+    write( 'guess!' ),
+    read(G),
+    loop(G,A).
+
+choose(P,Q,R)
+	:- random(P,Q,R).
+
+loop(G,G)
+	:- write('Yes!').
+loop(G,A)
+	:- G > A,
+    write('Lower!'),
+    read(H),
+    loop(H,A).
+loop(G,A)
+	:- G < A,
+    write('Higher!'),
+    read(H),
+    loop(H,A).
